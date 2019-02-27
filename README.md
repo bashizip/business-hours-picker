@@ -5,8 +5,7 @@ A business hours picker lib for android *
 
 Want to add a business hours picker and viewer in your application? Try this library ! 
 
-
-![capture1](https://raw.githubusercontent.com/bashizip/business-hours-picker/master/captures/device-2019-02-27-224116.png)
+![gif](https://github.com/bashizip/business-hours-picker/blob/master/captures/ezgif.com-resize.gif?raw=true)
 
 
 Support for Android 4.0.3 ( api 19 ) and up
@@ -54,7 +53,7 @@ First  Add the picker and the viewer you want to use in your layout files. The l
         
    **BusinessHoursView**
     
-    Use it to display a single business day
+   Use it to display a single business day
     
      <com.bashizip.bhlib.BusinessHourView
         android:layout_width="match_parent"
@@ -62,7 +61,7 @@ First  Add the picker and the viewer you want to use in your layout files. The l
         
    **BusinessHoursWeekView**
      
-    Use it to display a full week of business days 
+   Use it to display a full week of business days 
     
     <com.bashizip.bhlib.BusinessHoursWeekView
         android:id="@+id/bh_view"
@@ -91,14 +90,14 @@ First  Add the picker and the viewer you want to use in your layout files. The l
         
    **The viewer activity or fragment**
    
-        Intent intent = getIntent();
-        List<BusinessHours> businessHoursList = (List<BusinessHours>) intent.getSerializableExtra(MainActivity.BH_LIST);
+   
+        List<BusinessHours> businessHoursList = getList();
        
        // Just call the setModel method and it's done !
        businessHoursWeekView.setModel(businessHoursList);
        
     
-    See the full sample app for more details
+   See the full sample app for more details
        
 
   
