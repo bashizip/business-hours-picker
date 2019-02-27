@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="busines_hours">
+        <item>""</item>
+        <item>24h</item>
+        <item>0:00 am</item>
+        <item>1:00 am</item>
+        <item>2:00 am</item>
+        <item>3:00 am</item>
+        <item>4:00 am</item>
+        <item>5:00 am</item>
+        <item>6:00 am</item>
+        <item>7:00 am</item>
+        <item>8:00 am</item>
+        <item>9:00 am</item>
+        <item>10:00 am</item>
+        <item>11:00 am</item>
+        <item>12:00 am</item>
+        <item>1:00 pm</item>
+        <item>1:00 pm</item>
+        <item>2:00 pm</item>
+        <item>3:00 pm</item>
+        <item>4:00 pm</item>
+        <item>5:00 pm</item>
+        <item>6:00 pm</item>
+        <item>7:00 pm</item>
+        <item>8:00 pm</item>
+        <item>9:00 pm</item>
+        <item>10:00 pm</item>
+        <item>11:00 pm</item>
+        <item>12:00 pm</item>
+    </string-array>
+</resources>

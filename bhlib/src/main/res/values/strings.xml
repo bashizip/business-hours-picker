@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BHLib</string>
+    <string name="bh_closed">Closed</string>
+    <string name="bh_open">Open</string>
+    <string name="bh_start_hours">From</string>
+    <string name="bh_end_hours">To</string>
+
+    <string name="bhv_monday">Monday</string>
+    <string name="bhv_tuesday">Tuesday</string>
+    <string name="bhv_wednesday">Wednesday</string>
+    <string name="bhv_thursday">Thursday</string>
+    <string name="bhv_friday">Friday</string>
+    <string name="bhv_saturday">Saturday</string>
+    <string name="bhv_sunday">Sunday</string>
+
+    <string name="bh_choose_business_hours">Please choose your business hours</string>
+    <string name="apply">Appliquer</string>
+    <string name="all_day">24h</string>
+</resources>

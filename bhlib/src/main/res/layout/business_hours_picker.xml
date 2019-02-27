@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tv_bh_dayofweek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="Sunday"
+            android:textColor="@color/text_msg_input"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/switch_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:gravity="center|end"
+            android:padding="8dp"
+            android:textColor="@color/text_msg_input"
+            android:textOff="@string/bh_closed"
+            android:textOn="@string/bh_open"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/tv_bh_dayofweek"
+            app:showText="false"
+            app:switchPadding="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_hours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/switch_open">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/bh_start_hours"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spin_bh_from"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:entries="@array/busines_hours"
+            android:spinnerMode="dropdown"
+            tools:listitem="@layout/spinner_item_hours" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/bh_end_hours"
+            android:textSize="12sp" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spin_bh_to"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:entries="@array/busines_hours"
+            android:spinnerMode="dropdown"
+            tools:listitem="@layout/spinner_item_hours" />
+
+    </LinearLayout>
+
+</LinearLayout>
