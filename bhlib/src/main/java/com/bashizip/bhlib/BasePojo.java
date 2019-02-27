@@ -1,8 +1,9 @@
 package com.bashizip.bhlib;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class BasePojo {
+public abstract class BasePojo implements Serializable {
     public String id;
 
     @Override
