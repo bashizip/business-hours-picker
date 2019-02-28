@@ -45,8 +45,9 @@ First  Add the picker and the viewer you want to use in your layout files. The l
   **BusinessHoursWeekView**
   
   Use it to pick a full week of business days from monday to sunday
-  
-   <com.bashizip.bhlib.BusinessHoursWeekView
+
+
+    <com.bashizip.bhlib.BusinessHoursWeekView
         android:id="@+id/bh_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -97,7 +98,39 @@ First  Add the picker and the viewer you want to use in your layout files. The l
        businessHoursWeekView.setModel(businessHoursList);
        
     
-   See the full sample app for more details
+   See the full sample app for more details.
+
+
+      See the full sample app for more details.
+
+      ## Potential impovements
+
+      * More styling
+
+
+      ## Licence
+
+      MIT License
+
+   Copyright (c) [2019] [Patrick Bashizi]
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to deal
+   in the Software without restriction, including without limitation the rights
+   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in all
+   copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
        
 
   
