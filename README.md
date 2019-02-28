@@ -119,6 +119,7 @@ See the full sample app for more details.
   ## Potential impovements
 
     * More styling
+    * Kotlin version
 
 
   ## Licence
