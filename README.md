@@ -90,15 +90,10 @@ First  Add the picker and the viewer you want to use in your layout files. The l
 	  BusinessHoursWeekPicker bh_picker = findViewById(R.id.bh_picker);
 	  Button btn_apply = findViewById(R.id.btn_apply);
 	     btn_apply.setOnClickListener(view -> {
+	     
 		   List<BusinessHours> bhs = bh_picker.getBusinessHoursList();
 
 		   // Here do your stuffs with the list
-
-	   //In this example we pass it to another activity for viewing
-
-	   Intent intent = new Intent(this, ViewerActivity.class);
-		    intent.putExtra(BH_LIST, (Serializable) bhs);
-		    startActivity(intent);
 
 		});
  		
