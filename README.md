@@ -32,8 +32,8 @@ Step 1 : Add jitpack to your build.gradle file
   
   ```groovy
   
-    implementation 'com.github.bashizip:business-hours-picker:v1.0.0-beta.2'
-    
+ 	implementation 'com.github.bashizip:business-hours-picker:v1.0.0-beta.2'
+	
    ````
    
   ## How to use it 
@@ -46,7 +46,7 @@ First  Add the picker and the viewer you want to use in your layout files. The l
 
  Use it to pick a single business day
  
- ```xml
+ ```
 
     <com.bashizip.bhlib.BusinessHoursPicker
         app:dayOfWeek="Monday"
@@ -61,10 +61,10 @@ First  Add the picker and the viewer you want to use in your layout files. The l
 
  ```xml
 
-    <com.bashizip.bhlib.BusinessHoursWeekView
+   <com.bashizip.bhlib.BusinessHoursWeekView
         android:id="@+id/bh_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+      android:layout_height="wrap_content"/>
 
    ```
    
@@ -99,17 +99,16 @@ First  Add the picker and the viewer you want to use in your layout files. The l
   
      ```java
      
-        BusinessHoursWeekPicker bh_picker = findViewById(R.id.bh_picker);
-        Button btn_apply = findViewById(R.id.btn_apply);
-
-        btn_apply.setOnClickListener(view -> {
-
-            List<BusinessHours> bhs = bh_picker.getBusinessHoursList();
-            
-            // Here do your stuffs with the list
-            
-            //In this example we pass it to another activity for viewing
-            Intent intent = new Intent(this, ViewerActivity.class);
+  BusinessHoursWeekPicker bh_picker = findViewById(R.id.bh_picker);
+  Button btn_apply = findViewById(R.id.btn_apply);
+     btn_apply.setOnClickListener(view -> {
+           List<BusinessHours> bhs = bh_picker.getBusinessHoursList();
+         
+	   // Here do your stuffs with the list
+          
+   //In this example we pass it to another activity for viewing
+           
+   Intent intent = new Intent(this, ViewerActivity.class);
             intent.putExtra(BH_LIST, (Serializable) bhs);
             startActivity(intent);
 
