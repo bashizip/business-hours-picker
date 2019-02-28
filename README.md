@@ -16,16 +16,25 @@ Feel free to fork or issue pull requests on github. Issues can be reported on th
 
 Step 1 : Add jitpack to your build.gradle file
 
+```groovy
+
 	allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
+	
+````
+
   
   Step 2 : Add the dependency
   
+  ```groovy
+  
     implementation 'com.github.bashizip:business-hours-picker:v1.0.0-beta.2'
+    
+   ````
    
   ## How to use it 
   
@@ -36,43 +45,60 @@ First  Add the picker and the viewer you want to use in your layout files. The l
 **BusinessHoursPicker**
 
  Use it to pick a single business day
+ 
+ ```xml
 
     <com.bashizip.bhlib.BusinessHoursPicker
         app:dayOfWeek="Monday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+```
         
   **BusinessHoursWeekView**
   
   Use it to pick a full week of business days from monday to sunday
 
+ ```xml
 
     <com.bashizip.bhlib.BusinessHoursWeekView
         android:id="@+id/bh_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-        
+
+   ```
+   
    **BusinessHoursView**
     
    Use it to display a single business day
-    
+   
+   ```xml  
+
      <com.bashizip.bhlib.BusinessHourView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-        
-   **BusinessHoursWeekView**
+
+    ```
+
+**BusinessHoursWeekView**
      
    Use it to display a full week of business days 
-    
+   
+   ```xml  
+
     <com.bashizip.bhlib.BusinessHoursWeekView
         android:id="@+id/bh_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-        
+
+     ```     
+     
   Then in your java code :
   
   **The picker activity of fragment**
   
+     ```java
+     
         BusinessHoursWeekPicker bh_picker = findViewById(R.id.bh_picker);
         Button btn_apply = findViewById(R.id.btn_apply);
 
@@ -88,18 +114,26 @@ First  Add the picker and the viewer you want to use in your layout files. The l
             startActivity(intent);
 
         });
+ 		
+	```
+	
         
    **The viewer activity or fragment**
    
+   
+   
+   
+   ```java
    
         List<BusinessHours> businessHoursList = getList();
        
        // Just call the setModel method and it's done !
        businessHoursWeekView.setModel(businessHoursList);
 
+```
 
 
- See the full sample app for more details.
+See the full sample app for more details.
 
   ## Potential impovements
 
