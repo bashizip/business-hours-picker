@@ -86,7 +86,7 @@ First  Add the picker and the viewer you want to use in your layout files. The l
   
   **The picker activity of fragment**
   
-``` lang-java
+```java
 	  BusinessHoursWeekPicker bh_picker = findViewById(R.id.bh_picker);
 	  Button btn_apply = findViewById(R.id.btn_apply);
 	     btn_apply.setOnClickListener(view -> {
