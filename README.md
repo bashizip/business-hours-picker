@@ -45,11 +45,12 @@ First  Add the picker and the viewer you want to use in your layout files. The l
  Use it to pick a single business day
  
 
-
+```xml
     <com.bashizip.bhlib.BusinessHoursPicker
         app:dayOfWeek="Monday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+```
 
         
   **BusinessHoursWeekView**
