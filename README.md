@@ -56,32 +56,34 @@ First  Add the picker and the viewer you want to use in your layout files. The l
   **BusinessHoursWeekView**
   
   Use it to pick a full week of business days from monday to sunday
-
+  
+ ```xml
 	   <com.bashizip.bhlib.BusinessHoursWeekView
 		android:id="@+id/bh_view"
 		android:layout_width="match_parent"
 	      android:layout_height="wrap_content"/>
+```
 
-   
    **BusinessHoursView**
     
    Use it to display a single business day
    
+ ```xml
      <com.bashizip.bhlib.BusinessHourView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
+```
 
 **BusinessHoursWeekView**
      
    Use it to display a full week of business days 
    
-
+ ```xml
     <com.bashizip.bhlib.BusinessHoursWeekView
         android:id="@+id/bh_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-  
+ ``` 
      
   Then in your java code :
   
@@ -102,12 +104,12 @@ First  Add the picker and the viewer you want to use in your layout files. The l
         
    **The viewer activity or fragment**
    
-   
+  ```java
         List<BusinessHours> businessHoursList = getList();
        
        // Just call the setModel method and it's done !
        businessHoursWeekView.setModel(businessHoursList);
-
+ ```
 
 
 See the full sample app for more details.
