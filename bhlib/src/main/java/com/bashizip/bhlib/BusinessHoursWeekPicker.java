@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -12,12 +13,12 @@ public class BusinessHoursWeekPicker extends LinearLayout {
 
     List<BusinessHoursPicker> businessHoursPickerList;
 
-
     private List<BusinessHours> businessHoursList;
 
     public BusinessHoursWeekPicker(Context context) {
         super(context);
         initViews(context, null);
+
     }
 
     public BusinessHoursWeekPicker(Context context, AttributeSet attrs) {
@@ -76,9 +77,9 @@ public class BusinessHoursWeekPicker extends LinearLayout {
 
     }
 
-    public List<BusinessHours> getBusinessHoursList() {
+    public List<BusinessHours> getBusinessHoursList() throws ValdationException {
 
-        businessHoursList = new LinkedList<>();
+        businessHoursList = new ArrayList<>();
 
         for (BusinessHoursPicker view : businessHoursPickerList) {
             if (view.isOpenDay()) {

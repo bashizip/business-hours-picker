@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="BusinessHoursPicker">
         <attr name="dayOfWeek" format="string" />
         <attr name="isOpenDay" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="BusinessHoursWeekView">
-        <attr name="bhText" format="string" />
+        <attr name="bhIcon" format="integer" />
+        <attr name="bhTextColor" format="color" />
+        <attr name="bhTextSize" format="integer" />
+        <attr name="bhIconPadding" format="integer" />
+        <attr name="bhTextStyle" format="flags" />
+        <attr name="bhTodayColor" format="color" />
+        <attr name="bhTodayStyle" format="flags" />
+        <attr name="bhTodayTextSize" format="integer" />
+        <attr name="bhTodayIcon" format="integer" />
     </declare-styleable>
+
 </resources>

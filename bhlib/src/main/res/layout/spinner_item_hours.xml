@@ -3,4 +3,4 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="8:00 am"
-    android:textColor="@color/text_msg_input" />
+    android:textColor="@color/text_default_color" />

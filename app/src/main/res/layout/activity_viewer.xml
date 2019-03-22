@@ -2,7 +2,7 @@
 <RelativeLayout
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bh="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,10 +12,15 @@
     <com.bashizip.bhlib.BusinessHoursWeekView
         android:layout_centerInParent="true"
         android:id="@+id/bh_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:gravity="center"
+        bh:bhTextSize="14"
+        bh:bhIcon="@drawable/ic_today_black_24dp"
+        bh:bhTodayIcon="@drawable/ic_today_black_24dp"
+        bh:bhTextColor="@color/text_default_color"
+        bh:bhTodayColor="@color/colorAccent"
+        bh:bhTodayTextSize="16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 
-    <com.bashizip.bhlib.BusinessHourView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 </RelativeLayout>

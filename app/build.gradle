@@ -31,6 +31,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation 'com.github.bashizip:business-hours-picker:1.0.0-beta.2'
+    implementation project(path: ':bhlib')
 
 }

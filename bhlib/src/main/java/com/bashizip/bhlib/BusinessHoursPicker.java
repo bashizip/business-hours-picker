@@ -15,7 +15,8 @@ import android.widget.TextView;
 public class BusinessHoursPicker extends LinearLayout {
 
 
-    TextView tv_dayOfWeek;
+    TextView tv_dayOfWeek,tv_from,tv_to;
+
     SwitchCompat switch_open;
 
     AppCompatSpinner spin_bh_from;
@@ -59,7 +60,8 @@ public class BusinessHoursPicker extends LinearLayout {
         spin_bh_from = v.findViewById(R.id.spin_bh_from);
         spin_bh_to = v.findViewById(R.id.spin_bh_to);
         lyt_hours = v.findViewById(R.id.lyt_hours);
-
+        tv_from = v.findViewById(R.id.tv_from);
+        tv_to = v.findViewById(R.id.tv_to);
 
         TypedArray array = context.getTheme()
                 .obtainStyledAttributes(attrs, R.styleable.BusinessHoursPicker, 0, 0);
@@ -69,11 +71,9 @@ public class BusinessHoursPicker extends LinearLayout {
             dayOfWeek = array.getString(R.styleable.BusinessHoursPicker_dayOfWeek);
             isOpenDay = array.getBoolean(R.styleable.BusinessHoursPicker_isOpenDay, false);
 
-
         } finally {
             array.recycle();
         }
-
 
         setupActions(dayOfWeek);
     }
@@ -96,7 +96,6 @@ public class BusinessHoursPicker extends LinearLayout {
                 spin_bh_to.setSelection(0);
             }
 
-
         });
 
         spin_bh_from.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -110,8 +109,10 @@ public class BusinessHoursPicker extends LinearLayout {
                 if (from.equals(allDay)) {
                     spin_bh_to.setVisibility(INVISIBLE);
                     to = allDay;
+                    tv_to.setVisibility(INVISIBLE);
                 } else {
                     spin_bh_to.setVisibility(VISIBLE);
+                    tv_to.setVisibility(VISIBLE);
                 }
 
             }
@@ -128,16 +129,16 @@ public class BusinessHoursPicker extends LinearLayout {
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
 
                 to = adapterView.getItemAtPosition(position).toString();
-
                 String allDay = BusinessHoursPicker.this.getContext().getString(R.string.all_day);
 
                 if (to.equals(allDay)) {
                     spin_bh_from.setVisibility(INVISIBLE);
                     from = allDay;
+                    tv_from.setVisibility(INVISIBLE);
                 } else {
                     spin_bh_from.setVisibility(VISIBLE);
+                    tv_from.setVisibility(VISIBLE);
                 }
-
 
             }
 
@@ -190,11 +191,17 @@ public class BusinessHoursPicker extends LinearLayout {
         this.to = to;
     }
 
-    public BusinessHours getBusinessHours() {
+    public BusinessHours getBusinessHours() throws ValdationException {
 
         businessHours.setDayOfWeek(dayOfWeek);
         businessHours.setFrom(from);
         businessHours.setTo(to);
+
+        if(from.length()<1){
+            if(to.length()<1){
+                throw new ValdationException(getContext().getString(R.string.validation_exception_msg),dayOfWeek);
+            }
+        }
 
 
         if (dayOfWeek.equals(getContext().getString(R.string.bhv_sunday))) {

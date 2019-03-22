@@ -9,22 +9,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
-
     <com.bashizip.bhlib.BusinessHoursWeekPicker
         android:id="@+id/bh_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-
-
-    <Button
+    <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_apply"
         style="@style/Widget.AppCompat.Button.Colored"
         android:text="Apply"
         android:layout_gravity="center"
         android:layout_width="120dp"
         android:layout_height="60dp" />
-
 </LinearLayout>
 
 </ScrollView>

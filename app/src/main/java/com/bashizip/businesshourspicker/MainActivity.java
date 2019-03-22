@@ -3,10 +3,14 @@ package com.bashizip.businesshourspicker;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Button;
+import android.widget.Toast;
+
 
 import com.bashizip.bhlib.BusinessHours;
 import com.bashizip.bhlib.BusinessHoursWeekPicker;
+import com.bashizip.bhlib.ValdationException;
 
 import java.io.Serializable;
 import java.util.List;
@@ -26,7 +30,15 @@ public class MainActivity extends AppCompatActivity {
 
         btn_apply.setOnClickListener(view -> {
 
-            List<BusinessHours> bhs = bh_picker.getBusinessHoursList();
+            List<BusinessHours> bhs = null;
+            try {
+
+                bhs = bh_picker.getBusinessHoursList();
+
+            } catch (ValdationException e) {
+                Toast.makeText(this,e.getMessage(),Toast.LENGTH_LONG).show();
+                return;
+            }
 
             Intent intent = new Intent(this, ViewerActivity.class);
             intent.putExtra(BH_LIST, (Serializable) bhs);
