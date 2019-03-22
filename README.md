@@ -1,7 +1,7 @@
 # Business Hours Picker
 A business hours picker lib for android *
 
-[![](https://jitpack.io/v/bashizip/business-hours-picker.svg)](https://jitpack.io/#bashizip/business-hours-picker)
+[![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19) [![](https://jitpack.io/v/bashizip/business-hours-picker.svg)](https://jitpack.io/#bashizip/business-hours-picker) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Business%20Hours%20Picker-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/7540)
 
 Want to add a business hours picker and viewer in your application? Try this library ! 
 
