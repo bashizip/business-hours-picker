@@ -9,10 +9,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".MainActivity">
-    <com.bashizip.bhlib.BusinessHoursWeekPicker
-        android:id="@+id/bh_picker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_apply"
