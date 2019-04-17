@@ -35,7 +35,8 @@ Step 1 : Add jitpack to your build.gradle file
 
 ## Update
 
-Simplified api : one picker, one viewer.
+- More Styling
+- Simplified api : one picker, one viewer.
 
   ## How to use it
 
