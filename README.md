@@ -31,7 +31,7 @@ Step 1 : Add jitpack to your build.gradle file
 
 
 
- 	implementation 'com.github.bashizip:business-hours-picker:v1.0.0'
+ 	implementation 'com.github.bashizip:business-hours-picker:Tag'
 
 ## Update
 
