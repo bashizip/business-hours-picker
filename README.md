@@ -11,7 +11,6 @@ Want to add a business hours picker and viewer in your application? Try this lib
 
 ------------
 
-
 Support for Android 4.0.3 ( api 19 ) and up
 
 Feel free to fork or issue pull requests on github. Issues can be reported on the github issue tracker.
