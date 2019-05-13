@@ -10,9 +10,6 @@ Want to add a business hours picker and viewer in your application? Try this lib
 ![gif](https://github.com/bashizip/business-hours-picker/blob/master/captures/ezgif.com-resize.gif?raw=true)
 
 ------------
-
-Support for Android 4.0.3 ( api 19 ) and up
-
 Feel free to fork or issue pull requests on github. Issues can be reported on the github issue tracker.
 
 ## Installation
