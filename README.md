@@ -108,7 +108,7 @@ You can style the viewer  using theses attributes :
 | ------------ | ------------ |
 | bhIcon  | Left icon of the day  |
 |bhTextColor   |  Text color |
-| bhTextSize  | Test Size  |
+| bhTextSize  | Text Size  |
 | bhIconPadding  | Left icon padding  |
 |  bhTextStyle | Default text style   |
 |  bhTodayStyle | Today  text style ( highlighted)   |
