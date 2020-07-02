@@ -31,7 +31,7 @@ Step 1 : Add jitpack to your build.gradle file
 
 
 
- 	implementation 'com.github.bashizip:business-hours-picker:Tag'
+ 	implementation 'com.github.bashizip:business-hours-picker:1.1.0'
 
 ## Update
 
@@ -74,17 +74,14 @@ First  Add the picker and the viewer you want to use in your layout files. The l
 
   Then in your java code :
 
-  **The picker activity of fragment**
+  **The picker activity or fragment**
 
 ```java
 	  BusinessHoursWeekPicker bh_picker = findViewById(R.id.bh_picker);
 	  Button btn_apply = findViewById(R.id.btn_apply);
 	     btn_apply.setOnClickListener(view -> {
-
 		   List<BusinessHours> bhs = bh_picker.getBusinessHoursList();
-
 		   // Here do your stuffs with the list
-
 		});
  ```
 
@@ -93,11 +90,17 @@ First  Add the picker and the viewer you want to use in your layout files. The l
 
   ```java
         List<BusinessHours> businessHoursList = getList();
-
        // Just call the setModel method and it's done !
        businessHoursWeekView.setModel(businessHoursList);
  ```
 
+  **You can also initialize the picker with a list of businessHours**
+
+  ```java
+        List<BusinessHours> businessHoursList = getList();
+       // Just call the setModel method and it's done !
+       businessHoursPicker.setBusinessHoursList(businessHoursList);
+ ```
 
 See the full sample app for more details.
 
