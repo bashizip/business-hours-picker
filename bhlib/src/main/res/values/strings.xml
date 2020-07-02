@@ -16,5 +16,5 @@
     <string name="bh_choose_business_hours">Please choose your business hours</string>
     <string name="apply">Appliquer</string>
     <string name="all_day">24h</string>
-    <string name="validation_exception_msg">Invalid business hours : You must specify at least one hour .</string>
+    <string name="validation_exception_msg">Invalid business hours</string>
 </resources>

@@ -72,7 +72,6 @@ public class BusinessHoursWeekView extends LinearLayout {
 
         model = new ArrayList<>();
         initModel();
-
         update();
     }
 
@@ -100,11 +99,8 @@ public class BusinessHoursWeekView extends LinearLayout {
         if (this.getChildCount() > 0) {
             this.removeAllViews();
         }
-
         invalidate();
-
         TextView tv;
-
         for (int i = 0; i < model.size(); i++) {
 
             tv = new TextView(this.getContext());
@@ -129,7 +125,6 @@ public class BusinessHoursWeekView extends LinearLayout {
                 tv.setCompoundDrawablesWithIntrinsicBounds(bhTodayIcon, null, null, null);
 
             }
-            tv.invalidate();
             this.addView(tv, i);
         }
         invalidate();

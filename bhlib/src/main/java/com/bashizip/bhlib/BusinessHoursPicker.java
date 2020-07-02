@@ -2,8 +2,10 @@ package com.bashizip.bhlib;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+
 import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.appcompat.widget.SwitchCompat;
+
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +13,13 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 
 public class BusinessHoursPicker extends LinearLayout {
-    TextView tv_dayOfWeek,tv_to;
+    TextView tv_dayOfWeek, tv_to;
     SwitchCompat switch_open;
     AppCompatSpinner spin_bh_from;
     AppCompatSpinner spin_bh_to;
@@ -25,7 +31,6 @@ public class BusinessHoursPicker extends LinearLayout {
 
     private String from;
     private String to;
-    private View v;
 
     private BusinessHours businessHours;
 
@@ -47,7 +52,7 @@ public class BusinessHoursPicker extends LinearLayout {
     private void initViews(Context context, AttributeSet attrs) {
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        v = layoutInflater.inflate(R.layout.business_hours_picker, this, true);
+        View v = layoutInflater.inflate(R.layout.business_hours_picker, this, true);
 
         tv_dayOfWeek = v.findViewById(R.id.tv_bh_dayofweek);
         switch_open = v.findViewById(R.id.switch_open);
@@ -58,17 +63,37 @@ public class BusinessHoursPicker extends LinearLayout {
 
         TypedArray array = context.getTheme()
                 .obtainStyledAttributes(attrs, R.styleable.BusinessHoursPicker, 0, 0);
-
         try {
-
             dayOfWeek = array.getString(R.styleable.BusinessHoursPicker_dayOfWeek);
             isOpenDay = array.getBoolean(R.styleable.BusinessHoursPicker_isOpenDay, false);
 
         } finally {
             array.recycle();
         }
-
+        initModel();
         setupActions(dayOfWeek);
+    }
+
+    void initModel() {
+        businessHours = new BusinessHours();
+        businessHours.setDayIndex(0);
+        businessHours.setOpenDay(false);
+        businessHours.setFrom(getContext().getResources().getStringArray(R.array.busines_hours)[10]);
+        businessHours.setTo(getContext().getResources().getStringArray(R.array.busines_hours)[20]);
+    }
+
+    private void update() {
+        tv_dayOfWeek.setText(businessHours.getDayOfWeek());
+        switch_open.setChecked(businessHours.isOpenDay());
+        spin_bh_from.setSelection(getIndexOfTime(businessHours.getFrom()));
+        spin_bh_to.setSelection(getIndexOfTime(businessHours.getTo()));
+        invalidate();
+    }
+
+    int getIndexOfTime(String time) {
+        String[] times = getContext().getResources().getStringArray(R.array.busines_hours);
+        List<String> timesList = Arrays.asList(times);
+        return timesList.indexOf(time);
     }
 
     public void setupActions(String day) {
@@ -78,6 +103,7 @@ public class BusinessHoursPicker extends LinearLayout {
         switch_open.setOnCheckedChangeListener((compoundButton, checked) ->
         {
             setOpenDay(checked);
+            businessHours.setOpenDay(checked);
 
             if (checked) {
                 lyt_hours.setVisibility(VISIBLE);
@@ -104,7 +130,6 @@ public class BusinessHoursPicker extends LinearLayout {
                     spin_bh_to.setVisibility(VISIBLE);
                     tv_to.setVisibility(VISIBLE);
                 }
-
             }
 
             @Override
@@ -185,9 +210,9 @@ public class BusinessHoursPicker extends LinearLayout {
         businessHours.setFrom(from);
         businessHours.setTo(to);
 
-        if(from.length()<1){
-            if(to.length()<1){
-                throw new ValdationException(getContext().getString(R.string.validation_exception_msg),dayOfWeek);
+        if (from.length() < 1) {
+            if (to.length() < 1) {
+                throw new ValdationException(getContext().getString(R.string.validation_exception_msg), dayOfWeek);
             }
         }
 
@@ -220,7 +245,8 @@ public class BusinessHoursPicker extends LinearLayout {
         return businessHours;
     }
 
-    public void setBusinessHours(BusinessHours bh){
-
+    public void setBusinessHours(BusinessHours bh) {
+        businessHours = bh;
+        update();
     }
 }

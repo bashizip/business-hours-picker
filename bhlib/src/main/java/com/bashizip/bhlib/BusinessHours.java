@@ -8,16 +8,32 @@ public class BusinessHours extends BasePojo implements Comparable<BusinessHours>
     private String dayOfWeek;
     private String from;
     private String to;
+    private boolean isOpenDay;
 
     public BusinessHours() {
 
     }
 
-
     public BusinessHours(String dayOfWeek, String from, String to) {
         this.dayOfWeek = dayOfWeek;
         this.from = from;
         this.to = to;
+    }
+
+    public static int[] getWeek_days_int() {
+        return week_days_int;
+    }
+
+    public static void setWeek_days_int(int[] week_days_int) {
+        BusinessHours.week_days_int = week_days_int;
+    }
+
+    public boolean isOpenDay() {
+        return isOpenDay;
+    }
+
+    public void setOpenDay(boolean openDay) {
+        isOpenDay = openDay;
     }
 
     public int getDayIndex() {
