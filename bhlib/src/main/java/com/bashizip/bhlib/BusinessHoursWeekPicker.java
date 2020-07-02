@@ -78,15 +78,12 @@ public class BusinessHoursWeekPicker extends LinearLayout {
     }
 
     public List<BusinessHours> getBusinessHoursList() throws ValdationException {
-
         businessHoursList = new ArrayList<>();
-
         for (BusinessHoursPicker view : businessHoursPickerList) {
             if (view.isOpenDay()) {
                 businessHoursList.add(view.getBusinessHours());
             }
         }
-
         return businessHoursList;
     }
 

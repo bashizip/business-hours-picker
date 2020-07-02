@@ -2,8 +2,8 @@ package com.bashizip.bhlib;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.widget.AppCompatSpinner;
-import android.support.v7.widget.SwitchCompat;
+import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.appcompat.widget.SwitchCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +13,8 @@ import android.widget.TextView;
 
 
 public class BusinessHoursPicker extends LinearLayout {
-
-
     TextView tv_dayOfWeek,tv_from,tv_to;
-
     SwitchCompat switch_open;
-
     AppCompatSpinner spin_bh_from;
     AppCompatSpinner spin_bh_to;
 
@@ -33,12 +29,10 @@ public class BusinessHoursPicker extends LinearLayout {
 
     private BusinessHours businessHours;
 
-
     public BusinessHoursPicker(Context context) {
         super(context);
         initViews(context, null);
     }
-
 
     public BusinessHoursPicker(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -101,11 +95,8 @@ public class BusinessHoursPicker extends LinearLayout {
         spin_bh_from.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-
                 from = adapterView.getItemAtPosition(position).toString();
-
                 String allDay = BusinessHoursPicker.this.getContext().getString(R.string.all_day);
-
                 if (from.equals(allDay)) {
                     spin_bh_to.setVisibility(INVISIBLE);
                     to = allDay;
@@ -229,8 +220,6 @@ public class BusinessHoursPicker extends LinearLayout {
         if (dayOfWeek.equals(getContext().getString(R.string.bhv_saturday))) {
             businessHours.setDayIndex(7);
         }
-
-
         return businessHours;
     }
 }

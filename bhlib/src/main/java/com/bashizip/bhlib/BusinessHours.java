@@ -11,7 +11,6 @@ public class BusinessHours extends BasePojo implements Comparable<BusinessHours>
 
     public BusinessHours() {
 
-
     }
 
 
