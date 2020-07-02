@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         BusinessHoursWeekPicker bh_picker = findViewById(R.id.bh_picker);
         Button btn_apply = findViewById(R.id.btn_apply);
+        Button btn_view = findViewById(R.id.btn_view);
 
         List<BusinessHours> savedList = (List<BusinessHours>) getIntent().getSerializableExtra(BH_LIST);
         if (savedList != null) {
@@ -43,11 +44,23 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
                 return;
             }
-
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra(BH_LIST, (Serializable) bhs);
             startActivity(intent);
 
+        });
+
+        btn_view.setOnClickListener(view -> {
+            List<BusinessHours> bhs = null;
+            try {
+                bhs = bh_picker.getBusinessHoursList();
+            } catch (ValdationException e) {
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+                return;
+            }
+            Intent intent = new Intent(this, ViewerActivity.class);
+            intent.putExtra(BH_LIST, (Serializable) bhs);
+            startActivity(intent);
         });
     }
 }
