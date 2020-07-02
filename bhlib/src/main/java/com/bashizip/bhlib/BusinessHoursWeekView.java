@@ -63,7 +63,7 @@ public class BusinessHoursWeekView extends LinearLayout {
             bhTextSize = array.getInt(R.styleable.BusinessHoursWeekView_bhTextSize, 14);
             bhTextStyle = array.getInt(R.styleable.BusinessHoursWeekView_bhTextStyle, Typeface.NORMAL);
             bhTodayColor = array.getColor(R.styleable.BusinessHoursWeekView_bhTodayColor, ContextCompat.getColor(getContext(), R.color.text_default_color));
-            bhTodaySize = array.getInt(R.styleable.BusinessHoursWeekView_bhTodayTextSize, 16);
+            bhTodaySize = array.getInt(R.styleable.BusinessHoursWeekView_bhTodayTextSize, 14);
             bhTodayStyle = array.getInt(R.styleable.BusinessHoursWeekView_bhTodayStyle, Typeface.BOLD);
 
         } finally {
@@ -120,7 +120,7 @@ public class BusinessHoursWeekView extends LinearLayout {
 
             if (bhv.getDayIndex() == TODAY) {
                 tv.setTextSize(bhTodaySize);
-                tv.setTypeface(Typeface.defaultFromStyle(bhTodayStyle), Typeface.BOLD);
+              //  tv.setTypeface(Typeface.defaultFromStyle(bhTodayStyle), Typeface.BOLD);
                 tv.setTextColor(bhTodayColor);
                 tv.setCompoundDrawablesWithIntrinsicBounds(bhTodayIcon, null, null, null);
 
