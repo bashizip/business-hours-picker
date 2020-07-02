@@ -16,12 +16,9 @@ public class ViewerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewer);
-
         BusinessHoursWeekView businessHoursWeekView = findViewById(R.id.bh_view);
-
         Intent intent = getIntent();
         List<BusinessHours> businessHoursList = (List<BusinessHours>) intent.getSerializableExtra(MainActivity.BH_LIST);
-
         businessHoursWeekView.setModel(businessHoursList);
     }
 }
