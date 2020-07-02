@@ -18,7 +18,6 @@ public class BusinessHoursWeekPicker extends LinearLayout {
     public BusinessHoursWeekPicker(Context context) {
         super(context);
         initViews(context, null);
-
     }
 
     public BusinessHoursWeekPicker(Context context, AttributeSet attrs) {

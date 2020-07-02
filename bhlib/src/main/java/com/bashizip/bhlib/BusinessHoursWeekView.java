@@ -113,7 +113,6 @@ public class BusinessHoursWeekView extends LinearLayout {
 
             BusinessHours bhv = model.get(i);
             tv.setText(bhv.toString());
-
             tv.setTextColor(bhTextColor);
             tv.setTextSize(bhTextSize);
             tv.setTypeface(Typeface.defaultFromStyle(bhTextStyle));
@@ -130,23 +129,16 @@ public class BusinessHoursWeekView extends LinearLayout {
                 tv.setCompoundDrawablesWithIntrinsicBounds(bhTodayIcon, null, null, null);
 
             }
-
             tv.invalidate();
-
             this.addView(tv, i);
         }
-
         invalidate();
     }
 
     public void setModel(List<BusinessHours> model) {
-
         if (model != null) {
             this.model = model;
             update();
         }
-
     }
-
-
 }

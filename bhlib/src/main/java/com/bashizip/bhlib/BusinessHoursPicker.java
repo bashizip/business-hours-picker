@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 
 public class BusinessHoursPicker extends LinearLayout {
-    TextView tv_dayOfWeek,tv_from,tv_to;
+    TextView tv_dayOfWeek,tv_to;
     SwitchCompat switch_open;
     AppCompatSpinner spin_bh_from;
     AppCompatSpinner spin_bh_to;
@@ -54,7 +54,6 @@ public class BusinessHoursPicker extends LinearLayout {
         spin_bh_from = v.findViewById(R.id.spin_bh_from);
         spin_bh_to = v.findViewById(R.id.spin_bh_to);
         lyt_hours = v.findViewById(R.id.lyt_hours);
-        tv_from = v.findViewById(R.id.tv_from);
         tv_to = v.findViewById(R.id.tv_to);
 
         TypedArray array = context.getTheme()
@@ -125,10 +124,8 @@ public class BusinessHoursPicker extends LinearLayout {
                 if (to.equals(allDay)) {
                     spin_bh_from.setVisibility(INVISIBLE);
                     from = allDay;
-                    tv_from.setVisibility(INVISIBLE);
                 } else {
                     spin_bh_from.setVisibility(VISIBLE);
-                    tv_from.setVisibility(VISIBLE);
                 }
 
             }
@@ -221,5 +218,9 @@ public class BusinessHoursPicker extends LinearLayout {
             businessHours.setDayIndex(7);
         }
         return businessHours;
+    }
+
+    public void setBusinessHours(BusinessHours bh){
+
     }
 }
