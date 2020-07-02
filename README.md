@@ -10,7 +10,7 @@ Want to add a business hours picker and viewer in your application? Try this lib
 ![gif](https://github.com/bashizip/business-hours-picker/blob/master/captures/ezgif.com-resize.gif?raw=true)
 
 ------------
-Feel free to fork or issue pull requests on github. Issues can be reported on the github issue tracker.
+Feel free to fork or pull requests on github. Issues can be reported on the github issue tracker.
 
 ## Installation
 
@@ -33,10 +33,12 @@ Step 1 : Add jitpack to your build.gradle file
 
  	implementation 'com.github.bashizip:business-hours-picker:1.1.0'
 
-## Update
+## v.1.1.0 Update
 
-- More Styling
-- Simplified api : one picker, one viewer.
+- Migration to AndroidX
+- Add setBusinessHourList() method to the picker
+- UI refresh
+- Improved picker layout performance
 
   ## How to use it
 
