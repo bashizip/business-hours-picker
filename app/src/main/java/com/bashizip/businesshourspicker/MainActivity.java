@@ -1,17 +1,11 @@
 package com.bashizip.businesshourspicker;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.provider.Settings;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bashizip.bhlib.BusinessHours;
 import com.bashizip.bhlib.BusinessHoursWeekPicker;
@@ -29,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        checkAndroidId();
-
         BusinessHoursWeekPicker bh_picker = findViewById(R.id.bh_picker);
         Button btn_apply = findViewById(R.id.btn_apply);
         Button btn_view = findViewById(R.id.btn_view);
@@ -68,13 +59,5 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(BH_LIST, (Serializable) bhs);
             startActivity(intent);
         });
-    }
-
-    void checkAndroidId() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            @SuppressLint("HardwareIds")
-            String deviceId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
-            Log.d("DeviceId", deviceId);
-        }
     }
 }
