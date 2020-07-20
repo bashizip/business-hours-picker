@@ -4,6 +4,7 @@ orbs:
  android: circleci/android@0.2.0
 
 jobs:
+
   build:
     executor: android/android
         
@@ -11,3 +12,8 @@ jobs:
       - checkout
       - run:
           command: ./gradlew build
+          
+       - run:
+          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+          command: sudo chmod +x ./gradlew
+          
