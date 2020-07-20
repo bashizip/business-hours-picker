@@ -1,0 +1,20 @@
+version: 2.1
+
+orbs:
+ android: circleci/android@0.2.0
+
+jobs:
+
+  build:
+    executor: android/android
+        
+    steps:
+      - checkout
+      - run:
+          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+          command: sudo chmod +x ./gradlew
+      - run:
+          command: ./gradlew build
+          
+
+          
