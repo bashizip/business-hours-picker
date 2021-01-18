@@ -104,7 +104,7 @@ First  Add the picker and the viewer you want to use in your layout files. The l
 
 See the full sample app for more details.
 
-  ##Styling
+## Styling
 You can style the viewer  using theses attributes :
 
 | Attribute  | Description  |
