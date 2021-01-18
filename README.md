@@ -32,14 +32,14 @@ Step 1 : Add jitpack to your build.gradle file
 
  	implementation 'com.github.bashizip:business-hours-picker:1.1.1'
 
-## v.1.1.0 Update
+## v1.1.1 Update
 
-- Migration to AndroidX
-- Add setBusinessHourList() method to the picker
-- UI refresh
-- Improved picker layout performance
+- Upgrade gradle version
+- Update ReadMe
+- Remove the v prefix in version names
 
-  ## How to use it
+
+## How to use it
 
 
 First  Add the picker and the viewer you want to use in your layout files. The library has 4 main components,
