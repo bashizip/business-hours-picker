@@ -6,8 +6,8 @@ A business hours picker lib for android
 
 Want to add a business hours picker and viewer in your application? Try this library !
 
-[![]()](https://raw.githubusercontent.com/bashizip/business-hours-picker/master/captures/device-2021-01-18-220722.png)[![](https://raw.githubusercontent.com/bashizip/business-hours-picker/master/captures/device-2021-01-18-221127.png)]
-
+![screen1](https://raw.githubusercontent.com/bashizip/business-hours-picker/master/captures/device-2021-01-18-220722.png)
+![screen2](https://raw.githubusercontent.com/bashizip/business-hours-picker/master/captures/device-2021-01-18-221127.png)
 ------------
 Feel free to fork or pull requests on github. Issues can be reported on the github issue tracker.
 
