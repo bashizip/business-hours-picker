@@ -16,7 +16,7 @@ public class SinglePickerActivity extends AppCompatActivity {
         BusinessHoursPicker picker = findViewById(R.id.single_picker);
         BusinessHours model = new BusinessHours();
         model.setOpenDay(true);
-        model.setDayOfWeek("Fridy");
+        model.setDayOfWeek("Friday");
         model.setFrom(getResources().getStringArray(com.bashizip.bhlib.R.array.busines_hours)[1]);
         model.setTo(getResources().getStringArray(com.bashizip.bhlib.R.array.busines_hours)[20]);
         picker.setBusinessHours(model);
