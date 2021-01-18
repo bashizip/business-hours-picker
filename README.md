@@ -32,7 +32,7 @@ Step 1 : Add jitpack to your build.gradle file
 
 
 
- 	implementation 'com.github.bashizip:business-hours-picker:1.1.0'
+ 	implementation 'com.github.bashizip:business-hours-picker:v.1.1.0'
 
 ## v.1.1.0 Update
 
