@@ -17,8 +17,8 @@ public class SinglePickerActivity extends AppCompatActivity {
         BusinessHours model = new BusinessHours();
         model.setOpenDay(true);
         model.setDayOfWeek("Friday");
-        model.setFrom(getResources().getStringArray(com.bashizip.bhlib.R.array.busines_hours)[1]);
-        model.setTo(getResources().getStringArray(com.bashizip.bhlib.R.array.busines_hours)[20]);
+        model.setFrom(getResources().getStringArray(com.bashizip.bhlib.R.array.business_hours)[1]);
+        model.setTo(getResources().getStringArray(com.bashizip.bhlib.R.array.business_hours)[20]);
         picker.setBusinessHours(model);
     }
 }
