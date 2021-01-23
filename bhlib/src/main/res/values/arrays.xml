@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="busines_hours">
+    <string-array name="business_hours">
         <item>""</item>
         <item>24h</item>
         <item>0:00 am</item>
