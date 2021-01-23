@@ -78,8 +78,8 @@ public class BusinessHoursPicker extends LinearLayout {
         businessHours = new BusinessHours();
         businessHours.setDayIndex(0);
         businessHours.setOpenDay(false);
-        businessHours.setFrom(getContext().getResources().getStringArray(R.array.busines_hours)[10]);
-        businessHours.setTo(getContext().getResources().getStringArray(R.array.busines_hours)[20]);
+        businessHours.setFrom(getContext().getResources().getStringArray(R.array.business_hours)[10]);
+        businessHours.setTo(getContext().getResources().getStringArray(R.array.business_hours)[20]);
     }
 
     private void update() {
@@ -91,7 +91,7 @@ public class BusinessHoursPicker extends LinearLayout {
     }
 
     int getIndexOfTime(String time) {
-        String[] times = getContext().getResources().getStringArray(R.array.busines_hours);
+        String[] times = getContext().getResources().getStringArray(R.array.business_hours);
         List<String> timesList = Arrays.asList(times);
         return timesList.indexOf(time);
     }
