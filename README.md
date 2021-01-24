@@ -42,9 +42,7 @@ Step 1 : Add jitpack to your build.gradle file
 ## How to use it
 
 
-First, add the picker or the viewer you want to use in your layout files.
-
-  **BusinessHoursWeekView**
+First, add the picker or the viewer you want to use in your layout files:
 
   Use it to pick a full week of business days from monday to sunday
  ```xml
