@@ -111,7 +111,7 @@ You can style the viewer  using theses attributes :
 | bhTextSize  | Text Size  |
 | bhIconPadding  | Left icon padding  |
 |  bhTextStyle | Default text style   |
-|  bhTodayStyle | Today  text style ( highlighted)   |
+|  bhTodayStyle | Today  text style (highlighted)   |
 |  bhTodayTextSize | Today  text size|
 | bhTodayIcon | Today left icon|
 
