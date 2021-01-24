@@ -42,8 +42,7 @@ Step 1 : Add jitpack to your build.gradle file
 ## How to use it
 
 
-First  Add the picker and the viewer you want to use in your layout files. The library has 4 main components,
-2 Pickers and 2 viewer respectively :
+First, add the picker or the viewer you want to use in your layout files.
 
   **BusinessHoursWeekView**
 
