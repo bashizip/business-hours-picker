@@ -36,7 +36,7 @@ Step 1 : Add jitpack to your build.gradle file
 
 - Upgrade gradle version
 - Update ReadMe
-- Remove the v prefix in version names
+- Removed the v prefix in version names
 
 
 ## How to use it
